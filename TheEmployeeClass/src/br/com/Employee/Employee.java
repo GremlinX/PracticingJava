@@ -1,10 +1,10 @@
 package br.com.Employee;
 
-public class Employee {
-	private int id;
-	private String firstName;
-	private String lastName;
-	private float salary;
+public abstract class Employee {
+	protected int id;
+	protected String firstName;
+	protected String lastName;
+	protected float salary;
 	
 	public Employee(int id, String firstName, String lastName, float salary) {
 		this.id = id;
@@ -26,7 +26,7 @@ public class Employee {
 	}
 	
 	public String getName() {
-		return (this.firstName + this.lastName);
+		return (this.firstName + " " +  this.lastName);
 	}
 	
 	public float getSalary() {
@@ -44,6 +44,9 @@ public class Employee {
 	public float raiseSalary(float percent) {
 		return (this.salary * percent) / 100;
 	}
+	
+	public abstract void work();
+	public abstract void rest();
 	
 	@Override
 	public String toString() {

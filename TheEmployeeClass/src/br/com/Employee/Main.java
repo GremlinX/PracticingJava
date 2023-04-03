@@ -3,25 +3,18 @@ package br.com.Employee;
 public class Main {
 
 	public static void main(String[] args) {
-		Employee e1 = new Employee(8, "John", "Doe", 2500.0f);
-		System.out.println(e1);
+		Recepcionist r1 = new Recepcionist(1, "Robert", "Java", 3000.0f);
+		Developer d1 = new Developer(2, "Diona", "Cobol", 3000.0f);
 		
-		e1.setSalary(999);
-		System.out.println(e1);
-		System.out.println("id is: " + e1.getId());
-		System.out.println("First name is: " + e1.getFirstName());
-		System.out.println("Last name is: " + e1.getLastName());
-		System.out.println("Salary is: " + e1.getSalary());
+		r1.answerCall();
+		r1.makeCall();
+		r1.work();
+		r1.rest();
 		
-	    System.out.println("name is: " + e1.getName());
-	    System.out.println("annual salary is: " + e1.getAnnualSalary()); // Test method
-
-	    // Test raiseSalary()
-	    System.out.println("Salary raise: " + e1.raiseSalary(10));
-	    System.out.println("New salary: " + (e1.raiseSalary(10) + e1.getSalary()));
-	    System.out.println(e1);
-
-		
+		d1.analysing();
+		d1.work();
+		d1.finilizeProject();
+		d1.rest();
 	}
 
 }
